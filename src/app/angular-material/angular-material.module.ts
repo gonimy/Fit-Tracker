@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import {MatNativeDateModule} from '@angular/material/core';
+
+
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonModule } from '@angular/material/button';
@@ -47,6 +51,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatDatepickerModule,
     MatFormFieldModule,
     MatRadioModule,
+    MatNativeDateModule,
     MatSelectModule,
     MatSliderModule,
     MatSlideToggleModule,
@@ -79,6 +84,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatButtonModule,
     MatInputModule,
     MatAutocompleteModule,
+    MatNativeDateModule,
     MatDatepickerModule,
     MatFormFieldModule,
     MatRadioModule,
