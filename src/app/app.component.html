@@ -1,1 +1,49 @@
-<router-outlet></router-outlet>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav role="navigation">
+    <mat-nav-list>
+      <a mat-list-item [routerLink]="['/signUp']" (click)="sidenav.close()"
+        ><mat-icon>face</mat-icon><span class="nav-caption"> Sign up </span></a
+      >
+      <a mat-list-item [routerLink]="['/logIn']" (click)="sidenav.close()"
+        ><mat-icon>input</mat-icon><span class="nav-caption"> Log in </span></a
+      >
+      <a mat-list-item [routerLink]="['/traning']" (click)="sidenav.close()"
+        ><mat-icon>fitness_center</mat-icon
+        ><span class="nav-caption"> Tranning</span></a
+      >
+      <mat-list-item>
+        <button mat-icon-button>
+          <mat-icon>eject</mat-icon>
+          <span class="nav-caption">Log out</span>
+        </button></mat-list-item
+      >
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        fxHide.gt-xs
+        (click)="sidenav.toggle()"
+        mat-icon-button
+        aria-label="icon-button with menu icon"
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+      <div>
+        <a routerLink="/"><span>LOGO</span></a>
+      </div>
+      <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
+        <ul fxLayout fxLayoutGap="10px" class="nav-items">
+          <li>
+            <a [routerLink]="['/logIn']">Log in</a>
+          </li>
+          <li><a [routerLink]="['/signUp']">Sign up</a></li>
+          <li><a [routerLink]="['/traning']">Tranning</a></li>
+        </ul>
+      </div>
+    </mat-toolbar>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>

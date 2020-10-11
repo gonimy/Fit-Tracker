@@ -5,7 +5,7 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { TrainingComponent } from './training/training.component';
 import { WelcomComponent } from './welcom/welcom.component';
 
-const routes: Routes = [
+const appRoutes: Routes = [
   { path: '', component: WelcomComponent },
   { path: 'traning', component: TrainingComponent },
   { path: 'logIn', component: LoginComponent },
@@ -13,7 +13,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(appRoutes)],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

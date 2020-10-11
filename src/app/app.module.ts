@@ -13,6 +13,8 @@ import { WelcomComponent } from './welcom/welcom.component';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
+import { NavHeaderComponent } from './nav-header/nav-header.component';
+import { NewTraningComponent } from './training/new-traning/new-traning.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { FormsModule } from '@angular/forms';
     CurrentTrainingComponent,
     PastTrainingComponent,
     WelcomComponent,
+    NavHeaderComponent,
+    NewTraningComponent,
   ],
   imports: [
     BrowserModule,

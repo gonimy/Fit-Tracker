@@ -1,47 +1,46 @@
 <section class="signup-form">
-    <form
-      fxLayout="column"
-      fxLayoutAlign="center center"
-      fxLayoutGap="10px"
-      #f="ngForm"
+  <form
+    fxLayout="column"
+    fxLayoutAlign="center center"
+    fxLayoutGap="10px"
+    #f="ngForm"
+  >
+    <mat-form-field>
+      <input
+        type="email"
+        matInput
+        placeholder="Your Email"
+        name="email"
+        ngModel
+        email
+        required
+        #emailInput="ngModel"
+      />
+      <mat-error *ngIf="emailInput.hasError('required')"
+        >This filed is required
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        type="password"
+        matInput
+        placeholder="Your Password"
+        name="password"
+        ngModel
+        required
+        minlength="6"
+        #pwInput="ngModel"
+    /></mat-form-field>
+    <br />
+
+    <button
+      type="submit"
+      mat-raised-button
+      color="primary"
+      [disabled]="f.invalid"
     >
-      <mat-form-field>
-        <input
-          type="email"
-          matInput
-          placeholder="Your Email"
-          name="email"
-          ngModel
-          email
-          required
-          #emailInput="ngModel"
-        />
-        <mat-error *ngIf="emailInput.hasError('required')"
-          >This filed is required
-        </mat-error>
-      </mat-form-field>
-      <mat-form-field >
-        <input
-          type="password"
-          matInput
-          placeholder="Your Password"
-          name="password"
-          ngModel
-          required
-          minlength="6"
-          #pwInput="ngModel"
-      /></mat-form-field>
-      <br />
-    
-  
-      <button
-        type="submit"
-        mat-raised-button
-        color="primary"
-        [disabled]="f.invalid"
-      >
-        Log In
-      </button>
-    </form>
-  </section>
-  
+      Log In
+    </button>
+  </form>
+</section>
+
